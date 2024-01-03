@@ -10,3 +10,22 @@
 
 //saida
 // = informar o resultado do jogo de futebol
+
+const time1 = "coritiba"
+const time2 = "vasco"
+
+const golsTime1 = 1
+const golsTime2 = 3
+
+    console.log(`${time1} ${golsTime1} X ${time2} ${golsTime2}`);
+
+if (golsTime1 < golsTime2) {
+    console.log(`O ${time2} ganha do ${time1} de ${golsTime2} a ${golsTime1}`);
+}
+else if (golsTime1 == golsTime2) {
+    console.log(`Os times ${time1} e ${time2} empatam por ${golsTime1} a ${golsTime2}.`);
+}
+else {
+    console.log(`O ${time1} ganha do ${time2} de ${golsTime1} a ${golsTime2}`);
+}
+

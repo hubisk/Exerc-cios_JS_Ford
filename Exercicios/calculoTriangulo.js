@@ -15,3 +15,18 @@
 //saida de dados
 // = informar se o triangulo é equilátero, escaleno ou isócele
 // = motrar a saída do programa na console
+
+
+const angulo1 = 60
+const angulo2 = 60
+const angulo3 = 60
+
+if (angulo1==angulo2 && angulo1==angulo3 && angulo3==angulo2) {
+    console.log("Triângulo Equilátero");
+} 
+else if (angulo1==angulo2 || angulo1==angulo3 || angulo2==angulo3) {
+    console.log("Triângulo Isóscele");    
+} 
+else {
+    console.log("Triângulo Escaleno");
+}

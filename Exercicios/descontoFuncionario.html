@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto Funcionario</title>
+</head>
+<body>
+    <script>
+        let valorCompra = prompt("Informe o valor da compra:")
+        const desconto = Number(prompt(`
+        Selecione o tipo de desconto:
+        1- Cliente comum
+        2- Cliente VIP
+        3- Funcionário
+        `))
+        switch (desconto) {
+            case 1:
+                alert(`O valor da compra foi de R$ ${valorCompra}
+                Você não obteve desconto.`)
+                break;
+            case 2:
+                descVip = valorCompra -(valorCompra * 0.05)
+                alert(`O valor da compra foi de R$ ${descVip}
+                Você obteve 5% de desconto.`)
+                break;
+            case 3:
+                descVip = valorCompra - (valorCompra * 0.1)
+                alert(`O valor da compra foi de R$ ${descVip}
+                Você obteve 10% de desconto.`)
+                break;
+        
+            default:
+                break;
+        }
+    </script>
+    
+</body>
+</html>
