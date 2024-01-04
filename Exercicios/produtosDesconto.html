@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto Produtos</title>
+</head>
+<body>
+    <script>
+        let nomeProduto = prompt("Informe o nome do produto: ")
+        let quantidadeProduto = prompt("Informe a quantidade adiquirida: ")
+        let valorUnidade = prompt(`Informe o valor unitário do ${nomeProduto}: `)
+
+        let valorPrecoBruto = quantidadeProduto * valorUnidade
+
+        if (quantidadeProduto <= 5) {
+
+            let calculoComDesconto = valorPrecoBruto * 0.98
+
+            alert(`Foram adquiridas ${quantidadeProduto} unidades do produto ${nomeProduto}, com o valor total de: R$${valorPrecoBruto}.
+Obteve um desconto de 2% e ficando no valor de: R$${calculoComDesconto.toFixed(2)}`)
+        } 
+        else if (quantidadeProduto > 5 && quantidadeProduto <= 10) {
+
+            let calculoComDesconto = valorPrecoBruto * 0.97
+
+            alert(`Foram adquiridas ${quantidadeProduto} unidades do produto ${nomeProduto}, com o valor total de: R$${valorPrecoBruto}.
+Obteve um desconto de 3% e ficando no valor de: R$${calculoComDesconto.toFixed(2)}`)            
+        }
+        else {
+
+            let calculoComDesconto = valorPrecoBruto * 0.95
+            
+            alert(`Foram adquiridas ${quantidadeProduto} unidades do produto ${nomeProduto}, com o valor total de: R$${valorPrecoBruto}.
+Obteve um desconto de 5% e ficando no valor de: R$${calculoComDesconto.toFixed(2)}`)
+        }
+
+    </script>
+</body>
+</html>

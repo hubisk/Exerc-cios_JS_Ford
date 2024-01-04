@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posto Gasolina</title>
+</head>
+<body>
+    <script>
+
+        let alc = Number(4.9);
+        let gas = Number(5.3);
+        let desconto20;
+        let descontoMais;
+        let litrosAbastecidos;
+
+        const tipoCombustivel = prompt(`Informe qual combustível será abastecido:
+        G - Gasolina
+        A - Álcool
+        `);
+        console.log(tipoCombustivel);
+
+        const litros = Number(prompt(`Informe quantos litros será abastecido:`));
+
+        console.log(litros);
+
+
+        switch (tipoCombustivel.toLowerCase()) {
+            case 'a':
+                litrosAbastecidos = alc * litros
+
+                if (litros <= 20) {
+                    desconto20 = litrosAbastecidos - (litrosAbastecidos * 0.03)
+                    alert(`Você abasteceu ${litros} de Álcool e obteve 3% de desconto, pagando o valor total de R$${desconto20.toFixed(2)}`)
+                }
+                else {
+                    descontoMais = litrosAbastecidos - (litrosAbastecidos * 0.05)
+                    alert(`Você abasteceu ${litros} de Álcool e obteve 5% de desconto, pagando o valor total de R$${descontoMais.toFixed(2)}`)
+                }                
+                break;
+            
+                case 'g':
+                litrosAbastecidos = gas * litros
+
+                if (litros <= 20) {
+                    desconto20 = litrosAbastecidos - (litrosAbastecidos * 0.04)
+                    alert(`Você abasteceu ${litros} de Álcool e obteve 4% de desconto, pagando o valor total de R$${desconto20.toFixed(2)}`)
+                }
+                else {
+                    descontoMais = litrosAbastecidos - (litrosAbastecidos * 0.06)
+                    alert(`Você abasteceu ${litros} de Álcool e obteve 6% de desconto, pagando o valor total de R$${descontoMais.toFixed(2)}`)
+                    }                
+                    break;
+            default:
+                break;
+        }
+    </script>
+    
+</body>
+</html>
