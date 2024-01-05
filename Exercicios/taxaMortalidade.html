@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxa de Natalidade/Mortalidade</title>
+</head>
+<body>
+    <script>
+        let taxaNatalidade;
+        let taxaMortalidade;
+
+        let escolhaTaxa = Number(prompt(`Qual taxa estatística gostaria de calcular?
+        1 - Natalidade
+        2 - Mortalidade`))
+
+        console.log(escolhaTaxa);
+
+        
+        let numeroHabitantes = Number(prompt("Informe a quantidade de habitantes atual: "));
+
+        switch (escolhaTaxa) {
+            case 1:
+            let numeroNascimentos = Number(prompt("Informe quantos nascimentos houveram: "));
+                taxaNatalidade = (numeroNascimentos * 1000)/numeroHabitantes
+                alert(`Existem ${numeroHabitantes} habitantes, houveram ${numeroNascimentos} nascimentos, então a taxa de natalidade foi de ${taxaNatalidade.toFixed(2)}%.`)
+                console.log(taxaNatalidade);
+                break;
+            
+            case 2:
+            let numeroObitos = Number(prompt("Informe quantos óbitos houveram: "));
+                taxaMortalidade = (numeroObitos * 1000)/numeroHabitantes
+                alert(`Existem ${numeroHabitantes} habitantes, houveram ${numeroObitos} óbitos, então a taxa de mortalidade foi de ${taxaMortalidade.toFixed(2)}%.`)
+                console.log(taxaMortalidade);
+                break;
+            default:
+                break;
+        }
+    </script>
+</body>
+</html>

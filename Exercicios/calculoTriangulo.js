@@ -17,9 +17,9 @@
 // = motrar a saída do programa na console
 
 
-const angulo1 = 60
+const angulo1 = 50
 const angulo2 = 60
-const angulo3 = 60
+const angulo3 = 70
 
 if (angulo1==angulo2 && angulo1==angulo3 && angulo3==angulo2) {
     console.log("Triângulo Equilátero");
