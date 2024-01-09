@@ -1,0 +1,46 @@
+<!-- // Desenvolva um programa que recebe do usuário, o placar de um jogo de futebol (os gols de cada time) e informa se o resultado foi um empate, se a vitória foi do primeiro time ou do segundo time.
+
+//entrada de dados
+// = informar os dois times de futebol
+// = informar o placar do jogo
+
+//processamento
+// = realizar a validação através das estruturas condicionais
+// = verificar se os times ganharam, perderam ou empataram
+
+//saida
+// = informar o resultado do jogo de futebol -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>futebol</title>
+</head>
+<body>
+    <script>
+
+        let time1;
+        let time2;
+        let placarTime1;
+        let placarTime2;
+        let resultado;
+
+        time1 = prompt("Informe o nome do primeiro time:")
+        time2 = prompt("informe o nome do segundo time:")
+
+        placarTime1 = prompt(`informe o placar do time ${time1}`)
+        placarTime2 = prompt(`informe o placar do time ${time2}`)
+
+        if (placarTime1 < placarTime2) {
+            alert(`O time ${time1} perdeu do ${time2}`)
+        }else if (placarTime1 > placarTime2) {
+            alert(`O time ${time1} ganhou do ${time2}`)
+        }else{
+            alert("os times empataram")
+        }
+
+    </script>
+</body>
+</html>

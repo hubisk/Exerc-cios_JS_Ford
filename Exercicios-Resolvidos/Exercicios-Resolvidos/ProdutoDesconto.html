@@ -1,0 +1,155 @@
+<!-- // Faça um algoritmo para ler: a descrição do produto (nome), a quantidade adquirida e o
+// preço unitário. Calcular e escrever o total (total = quantidade adquirida * preço unitário), o
+// desconto e o total a pagar (total a pagar = total - desconto), sabendo-se que:
+
+// - Se quantidade <= 5 o desconto será de 2%
+// - Se quantidade > 5 e quantidade <=10 o desconto será de 3%
+// - Se quantidade > 10 o desconto será de 5%
+
+// Dica: utilize if / else if / else
+
+//entrada de dados
+// = criar variável para receber o nome do produto 
+// = perguntar ao usuário qual vai ser a quantidade de produtos
+// = perguntar o preço unitário do produto
+
+//processamento de dados
+// = realizar o calculo do total da quantidade do produto * valor unitário do produto 
+// = realidar o calculo do desconto com base na quantidade de produtos que o usuário vai comprar
+
+//saída de dados
+// = mostrar a saída dos produtos que ela escolher e a quantidade e o preço de cada produto
+// = mostrar também o desconto de cada produto -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto Desconto</title>
+</head>
+<body>
+    <script>
+
+        let nomeProduto = prompt("Informe o nome do produto: ") 
+        let quantidadeProduto = prompt("Informe a quantidade adquirida: ")
+        let precoProduto = prompt (`Informe o valor unitário do ${nomeProduto}: `)
+        //processamento de dados
+        let calculoPrecoBruto = quantidadeProduto * precoProduto
+
+        if (quantidadeProduto <= 5) {
+
+            let calculoComDesconto = calculoPrecoBruto - (calculoPrecoBruto * 0.02)
+
+            alert(`O produto ${nomeProduto}, comprado ${quantidadeProduto} vezes, teve um valor com desconto de 2% e ficou: $${calculoComDesconto} reais`)
+
+        }else if (quantidadeProduto > 5 && quantidadeProduto <= 10) {
+            calculoComDesconto = calculoPrecoBruto - (calculoPrecoBruto * 0.03)
+
+            alert(`O produto ${nomeProduto}, comprado ${quantidadeProduto} vezes, teve um valor com desconto de 3% e fiocu: $${calculoComDesconto} reais`)
+        }else{
+            calculoComDesconto = calculoPrecoBruto - (calculoPrecoBruto * 0.05)
+
+            alert(`O produto ${nomeProduto}, comprado ${quantidadeProduto} vezes, com o valor de $${calculoPrecoBruto} rais,teve um valor com desconto de 5% e fiocu: $${calculoComDesconto} reais`)
+        }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let nomeProduto = prompt("Informe o nome do produto:")
+        // let quantidadeAdquirida = prompt("informe a quantidade de produtos:")
+        // let precoUnitario = prompt("Informe o valor do produto:")
+
+        // if (quantidadeAdquirida <= 5) {
+        //     let precoTotalSemDesconto = quantidadeAdquirida * precoUnitario
+        //     alert(`O preço do(a) ${nomeProduto}, sem o desconto é de: ${precoTotalSemDesconto}`)
+
+        //     let precoTotalComDesconto = precoTotalSemDesconto - (precoTotalSemDesconto * 0.02)
+        //     alert(`O preço do(a) ${nomeProduto}, com o desconto de 2% é de: ${precoTotalComDesconto}`)
+        
+        // }else if (quantidadeAdquirida <= 10) {
+        //     precoTotalSemDesconto = quantidadeAdquirida * precoUnitario
+        //     alert(`O preço do(a) ${nomeProduto}, sem o desconto é de: ${precoTotalSemDesconto}`)
+
+        //     precoTotalComDesconto = precoTotalSemDesconto - (precoTotalSemDesconto * 0.03)
+        //     alert(`O preço do(a) ${nomeProduto}, com o desconto de 3% é de: ${precoTotalComDesconto}`)            
+        // }else {
+
+        //     precoTotalSemDesconto = quantidadeAdquirida * precoUnitario
+        //     alert(`O preço do(a) ${nomeProduto}, sem o desconto é de: ${precoTotalSemDesconto}`)
+
+        //     precoTotalComDesconto = precoTotalSemDesconto - (precoTotalSemDesconto * 0.05)
+        //     alert(`O preço do(a) ${nomeProduto}, com o desconto de 5% é de: ${precoTotalComDesconto}`) 
+
+        // }
+
+
+    </script>
+</body>
+</html>

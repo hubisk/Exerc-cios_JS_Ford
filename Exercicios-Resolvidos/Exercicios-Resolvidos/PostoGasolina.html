@@ -1,0 +1,244 @@
+<!-- // Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+
+// Álcool:
+// . até 20 litros, desconto de 3% por litro Álcool
+// . acima de 20 litros, desconto de 5% por litro
+
+// Gasolina:
+// . até 20 litros, desconto de 4% por litro Gasolina
+// . acima de 20 litros, desconto de 6% por litro
+
+// Escreva um algoritmo que leia o número de litros vendidos e o tipo de combustível (codificado
+// da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente
+// sabendo-se que o preço do litro da gasolina é R$ 5,30 e o preço do litro do álcool é R$ 4,90.
+
+// Dica: utilize switch case, operadores lógicos e relacionais e estrutura de condição para otimizar o algorítimo.
+
+//entrada de dados
+// = selecionar se deseja abastecer com alcool ou com gasolina;
+// = selecionar a quantidade de litros que o usuário deseja;
+
+//processamento de dados
+// = switch case para gasolina ou alcool
+
+//saida de dados
+// = mostrar a porcentagem de desconto se for alcool ou se for gasolina -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posto de Gasolina</title>
+</head>
+<body>
+    <script>
+
+        let precoAlcool = 4.90
+        let precoGasolina = 5.30
+        let resultado;
+        let calcBrutoAlcool;
+        let calcBrutoGasolina;
+
+        const escolhaUsuario = prompt(`
+            Bem vindo ao posto de gasolina Cheiro Bom! Informe se você deseja abastecer Com:
+            A - Alcool
+            G - Gasolina
+        `);
+
+        switch (escolhaUsuario.toLowerCase()) {
+            case 'a':
+                    let quantidadeLitros = prompt("Informe a quantidade de Alcool que voce deseja: ")
+ 
+                    if (quantidadeLitros <= 20) {
+                        alert("Parabéns!! Você ganhou um desconto de 3% no seu abastecimento!")
+
+                        calcBrutoAlcool = quantidadeLitros * precoAlcool
+                        resultado = calcBrutoAlcool - (calcBrutoAlcool * 0.03)
+
+                        alert(`O preço total ficou de $${calcBrutoAlcool} reais, com o desconto de 3%, ficou $${resultado.toFixed(2)} reais`)
+                    }else{
+                        alert("Parabéns! Você ganhou um desconto de 5% no seu abastecimento!")
+
+                        calcBrutoAlcool = quantidadeLitros * precoAlcool
+                        resultado = calcBrutoAlcool - (calcBrutoAlcool * 0.05)
+
+                        alert(`O preço total ficou de $${calcBrutoAlcool} reais, com o desconto de 5%, ficou $${resultado.toFixed(2)} reais`)
+                    }
+                break;
+            case 'g':
+                    quantidadeLitros = prompt("Informe a quantidade de gasolina que você deseja abastecer:")
+
+                    if (quantidadeLitros <= 20) {
+                        alert("Parabéns, você ganhou 4% de desconto no seu abastecimento")
+
+                        calcBrutoGasolina = quantidadeLitros * precoGasolina
+                        resultado = calcBrutoAlcool - (calcBrutoAlcool * 0.04)
+
+                        alert(`O preço total ficou de $${calcBrutoGasolina} reais, com o desconto de 4%, ficou $${resultado.toFixed(2)} reais`)
+                    }else{
+                        alert("Parabéns, você ganhou 6% de desconto no seu abastecimento")
+
+                        calcBrutoGasolina = quantidadeLitros * precoGasolina
+                        resultado = calcBrutoAlcool - (calcBrutoAlcool * 0.06)
+
+                        alert(`O preço total ficou de $${calcBrutoGasolina} reais, com o desconto de 6%, ficou $${resultado.toFixed(2)} reais`)
+                    }
+                break;
+        
+            default:
+                break;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    //     let precoAlcool = 4.90
+    //     let precoGasolina = 5.30
+    //     let resultado;
+        
+    //     // function calculoAlcool(alcool) {
+    //     //     if (alcool <= 20) {
+    //     //         resultado = (precoAlcool * alcool) * 0.97
+
+    //     //         alert(`O total do seu abestecimento foi de: $${resultado.toFixed(2)} reais. `)
+    //     //     }
+    //     //     else{
+    //     //         resultado = (precoAlcool * alcool) * 0.95
+
+    //     //         alert(`O total do seu abestecimento foi de: $${resultado.toFixed(2)} reais.`)
+
+    //     //         console.log(resultado);
+    //     //     }
+    //     // }
+
+    //     const escolhaUser = prompt(
+    //         `Bem vindo ao programa! Por gentileza, escolha qual tipo de combustivel você deseja abastecer: 
+        
+    //         A- Alccol
+    //         G- Gasolina
+    //     `)
+
+    //    switch (escolhaUser.toLowerCase()) {
+    //     case 'a':
+    //         const litrosAlcool = prompt("Ok, você escolheu alcool... Informe quantos litros você deseja abastecer:")
+
+    //         if (litrosAlcool <= 20) {
+                
+    //             alert("Parabéns, você ganhou um desconto de 3%")
+
+    //             calculoPorLitro = litrosAlcool * precoAlcool
+    //             resultado = calculoPorLitro - (calculoPorLitro * 0.04)
+
+    //             alert(`O total do seu abestecimento foi de: ${resultado.toFixed(2)} com um desconto de 4%. Sem desconto: ${calculoPorLitro.toFixed(2)}`)
+    //         }else if (litrosAlcool > 20) {
+    //             alert("Parabéns, você ganhou um desconto de 5%")
+
+    //             calculoPorLitro = litrosAlcool * precoAlcool
+    //             resultado = calculoPorLitro - (calculoPorLitro * 0.06)
+
+    //             alert(`O total do seu abestecimento foi de: ${resultado.toFixed(2)} com um desconto de 6%. Sem desconto: ${calculoPorLitro.toFixed(2)}`)
+    //         }           
+
+    //         break;
+
+    //     case 'g':
+    //         const litrosGasolina = prompt("Ok, Voce informou Gasolina... informe quantos litros você quer abastecer...")
+
+    //         if (litrosGasolina <= 20) {
+                
+    //             alert("Parabéns, você ganhou um desconto de 4%")
+
+    //             calculoPorLitro = litrosGasolina * precoGasolina
+    //             resultado = calculoPorLitro - (calculoPorLitro * 0.04)
+
+    //             alert(`O total do seu abestecimento foi de: ${resultado.toFixed(2)} com um desconto de 4%. Sem desconto: ${calculoPorLitro.toFixed(2)}`)
+    //         }else if (litrosGasolina > 20) {
+    //             alert("Parabéns, você ganhou um desconto de 6%")
+
+    //             calculoPorLitro = litrosGasolina * precoGasolina
+    //             resultado = calculoPorLitro - (calculoPorLitro * 0.06)
+
+    //             alert(`O total do seu abestecimento foi de: ${resultado.toFixed(2)} com um desconto de 6%. Sem desconto: ${calculoPorLitro.toFixed(2)}`)
+    //         }
+    //         break;
+       
+    //     default:
+    //         alert("opção inválida!")
+    //         break;
+    //    }
+
+    </script>
+</body>
+</html>
