@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade CRUD</title>
+</head>
+<body>
+    <script>
+        let arrCadastroUser = []
+
+        function menuEscolhas() {        
+            opcaoMenu = prompt(`
+                -----  Menu de Cadastro  -----
+                [a] - Cadastrar Usuário
+                [b] - Listar Usuário(s)
+                [c] - Atualizar Usuário
+                [d] - Deletar Usuário
+                [x] - Sair do programa
+                
+                Escolha uma das opções do menu:`)
+                
+        }
+
+        function addUsuario() {
+            let nomeUser = prompt("Informe o nome do usuário:")
+            let celularUser = prompt(`Informe o celular do usuário ${nomeUser}`)
+
+            if (!nomeUser || !celularUser) {
+                alert("O nome e número de contato do usuário são obrigatórios!")                
+            }
+
+            arrCadastroUser.push({nomeUser, celularUser})
+
+            console.log(arrCadastroUser);
+        }
+
+        function listarUser() {
+            let listarCadastroUser;
+            for (const cadastroUser of arrCadastroUser) {
+                listarCadastroUser += (`
+                    Nome: ${cadastroUser.nomeUser}, Celular: ${cadastroUser.celularUser}
+                `)                
+            }
+            alert("-----  Lista de Usuários  -----" + listarCadastroUser)
+        }
+
+        function atualizarUser() {
+            let procuraCelular = prompt("Informe o celular que deseja atualizar:")
+            let userAtualizado = arrCadastroUser.find(cadastroUser => cadastroUser.celularUser === procuraCelular)
+
+            if (!userAtualizado) {
+                alert("Usuário não encontrado, insira um número de celular válido")
+                return;
+            }
+
+            let newNomeUser = prompt("Informe o novo nome de usuário:")
+            let newCelularUser = prompt(`Informe o novo número de celular do usuário ${newNomeUser}`)
+
+            if (newNomeUser) {
+                userAtualizado.nomeUser = newNomeUser
+            }
+            if (newCelularUser) {
+                userAtualizado.celularUser = newCelularUser
+            }
+            alert("Alteração do usuário bem sucedida.")
+        }
+
+        function deletarUser() {
+            let celularDel = prompt("Informe o número de celular que deseja deletar:")
+            let indiceUserDel = arrCadastroUser.findIndex(cadastroUser => cadastroUser.celularUser === celularDel)
+
+            if (indiceUserDel === -1) {
+                alert("Cadastro do usuário não foi encontrado.")
+                return;
+            }
+
+            if (confirm("Você tem certeza que quer deletar este usuário????") == true) {
+                arrCadastroUser.splice(indiceUserDel, 1)
+                alert("Usuário deletado com sucesso.")
+            } else {
+                return;
+            }            
+        }
+        //     arrCadastroUser.splice(indiceUserDel, 1)
+        //     alert("Usuário deletado com sucesso.")
+        // }
+
+        let opcaoMenu
+        while (opcaoMenu != "x") {
+            menuEscolhas()            
+
+            switch (opcaoMenu) {
+                case "a":
+                    addUsuario()
+                    break;
+                case "b":
+                    listarUser()
+                    break;
+                case "c":
+                    atualizarUser()
+                    break;
+                case "d":
+                    deletarUser()
+                    break;
+                case "x":
+                    alert("Fim do programa - Volte sempre!")
+                    break;
+            
+                default:
+                    alert("Por favor, escolha um opção Válida!!")
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
